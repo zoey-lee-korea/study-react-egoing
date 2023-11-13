@@ -1,4 +1,7 @@
 {
+  "counter": {
+    "value": 0
+  },
   "posts": [
     {
       "id": 1,
