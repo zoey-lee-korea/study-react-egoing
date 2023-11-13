@@ -10,7 +10,15 @@ function Counter({ title, initValue }) {
   const [step, setStep] = useState(1);
 
   const increaseClickHandler = () => {
-    setCount(count + step);
+    fetch("http://localhost:9999/counter", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ value: count + step }), // body는 JSON으로 보내야 한다
+    })
+      .then(response => response.json())
+      .then(result => setCount(result.value)); // server 통신 후 리턴값을 받는다
   };
   const decreaseClickHandler = () => {
     setCount(count - step);
