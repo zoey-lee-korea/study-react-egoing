@@ -5,10 +5,10 @@ import './App.css';
 function Counter({ title, initValue }) {
   const [count, setCount] = useState(initValue);
 
-  function increaseClickHandler() {
+  const increaseClickHandler = () => {
     setCount(count + 1);
   }
-  function decreaseClickHandler() {
+  const decreaseClickHandler = () => {
     setCount(count - 1);
   }
 
