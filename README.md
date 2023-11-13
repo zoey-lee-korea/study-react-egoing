@@ -4,17 +4,20 @@
 - 강사님 : Egoing
 - 실습 Github 자료 : https://github.com/egoingsb/react-lg-2023-11-13
 
-## Available Scripts
+## 유용한 자료
 
-In the project directory, you can run:
+- Online 프로젝트 : https://stackblitz.com/
+- ChatGPT & Copilot
 
-### `yarn start`
+### `배운점 (day 1)`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- react : https://react.dev/
+- react initialize : `npx create-react app . && npm run start`
+- props
+- useState
+- style (inline, css, css module)
+- useEffect
+- json-server `npx json-server --port 9999 --watch db.json`
 
 ### `yarn test`
 
