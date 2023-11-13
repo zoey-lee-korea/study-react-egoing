@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# [사내교육] 리액트 기본 실습 과정
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- 수강일 : 11/13, 11/20
+- 강사님 : Egoing
+- 실습 Github 자료 : https://github.com/egoingsb/react-lg-2023-11-13
 
 ## Available Scripts
 
