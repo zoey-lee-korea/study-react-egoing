@@ -17,14 +17,19 @@ function Counter({ title, initValue }) {
     setStep(Number(e.target.value));
   };
 
+  const counterStyle = { // Inline 방식의 Style 적용 = 객체 사용
+    backgroundColor: "#ccc",
+    padding: 10,
+  }
+
   return (
-    <>
+    <div style={counterStyle}>
       <h1>{title}</h1>
       <button onClick={increaseClickHandler}>+</button>
       <button onClick={decreaseClickHandler}>-</button>
       <input type="text" value={step} onChange={changeHandler}></input>
       {count}
-    </>
+    </div>
   );
 }
 
