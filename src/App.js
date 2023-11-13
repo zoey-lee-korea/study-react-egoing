@@ -1,10 +1,10 @@
 import './App.css';
 
-function Counter() {
+function Counter(props) {
   return (
     <>
-      <h1>Counter</h1>
-      <button>+</button>0
+      <h1>{props.title}</h1>
+      <button>+</button>{props.initValue}
     </>
   );
 }
@@ -12,7 +12,7 @@ function Counter() {
 function App() {
   return (
     <>
-      <Counter />
+      <Counter title="Counter App" initValue="0" />
     </>
   );
 }
