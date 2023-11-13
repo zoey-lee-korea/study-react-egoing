@@ -1,6 +1,8 @@
 import { useState } from 'react';
 
 import './App.css';
+import s from './App.module.css'
+
 import AccountBook from './AccountBook'
 
 function Counter({ title, initValue }) {
@@ -28,7 +30,7 @@ function Counter({ title, initValue }) {
       <button onClick={increaseClickHandler}>+</button>
       <button onClick={decreaseClickHandler}>-</button>
       <input type="text" value={step} onChange={changeHandler}></input>
-      {count}
+      <span className={s.count}>{count}</span>
     </div>
   );
 }
