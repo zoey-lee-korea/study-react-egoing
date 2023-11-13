@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './AccountBook.css';
 
 function Table({ data }) {
@@ -26,33 +26,49 @@ function Table({ data }) {
     );
 }
 
-function Input() {
+function Input(props) {
     const handleSubmit = (event) => {
         event.preventDefault();
-        // 폼 제출 로직
-        alert('Form submitted');
+        const title = event.target.title.value;
+        const amount = event.target.amount.value;
+        const etc = event.target.etc.value;
+        // props.onSubmit(title, amount, etc);
+        props.onSubmit({ title, amount, etc }); // JSON 배열로 전달
     };
 
     return (
         <form onSubmit={handleSubmit}>
-            <input type="text" placeholder="Text Field 1" />
-            <input type="text" placeholder="Text Field 2" />
-            <input type="text" placeholder="Text Field 3" />
+            <input type="text" name="title" placeholder="항목" />
+            <input type="text" name="amount" placeholder="금액" />
+            <input type="text" name="etc" placeholder="비고" />
             <button type="submit">Submit</button>
         </form>
     );
 }
 
+
 export default function AccountBook() {
-    const data = [
+    const [data, setData] = useState([
         { id: 1, title: '통신비', amount: 10000, etc: '...' },
         { id: 2, title: '교통비', amount: 20000, etc: '...' },
-    ];
+    ]);
+
+    const submitHandler = (newContent) => {
+        // const newData = {
+        //     id: Math.random(),
+        //     title: title,
+        //     amount: amount,
+        //     etc: etc
+        // };
+        const newData = { ...newContent, id: Math.random() }
+        setData([...data, newData])
+    };
+
     return (
         <div>
             <h1>가계부 App</h1>
             <Table data={data}></Table>
-            <Input></Input>
+            <Input onSubmit={submitHandler}></Input>
         </div>
     );
 }
