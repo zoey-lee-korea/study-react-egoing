@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 import './App.css';
+import AccountBook from './AccountBook'
 
 function Counter({ title, initValue }) {
   const [count, setCount] = useState(initValue);
@@ -31,6 +32,7 @@ function App() {
   return (
     <>
       <Counter title="Counter App" initValue={0} />
+      <AccountBook />
     </>
   );
 }
