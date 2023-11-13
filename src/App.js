@@ -21,7 +21,15 @@ function Counter({ title, initValue }) {
       .then(result => setCount(result.value)); // server 통신 후 리턴값을 받는다
   };
   const decreaseClickHandler = () => {
-    setCount(count - step);
+    fetch("http://localhost:9999/counter", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ value: count - step }),
+    })
+      .then(response => response.json())
+      .then(result => setCount(result.value));
   };
   const changeHandler = (e) => { // e: event
     setStep(Number(e.target.value));
