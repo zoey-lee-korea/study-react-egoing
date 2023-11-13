@@ -4,19 +4,20 @@ import './App.css';
 
 function Counter({ title, initValue }) {
   const [count, setCount] = useState(initValue);
-  // useState는 배열이다!
-  // const countState = useState(initValue);
-  // const count = countState[0]
-  // count setCount = countState[1]
 
-  function clickHandler() {
+  function increaseClickHandler() {
     setCount(count + 1);
+  }
+  function decreaseClickHandler() {
+    setCount(count - 1);
   }
 
   return (
     <>
       <h1>{title}</h1>
-      <button onClick={clickHandler}>+</button>{count}
+      <button onClick={increaseClickHandler}>+</button>
+      <button onClick={decreaseClickHandler}>-</button>
+      {count}
     </>
   );
 }
