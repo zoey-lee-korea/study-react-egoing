@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import './App.css';
 import s from './App.module.css'
@@ -23,6 +23,12 @@ function Counter({ title, initValue }) {
     backgroundColor: "#ccc",
     padding: 10,
   }
+
+  useEffect(() => {
+    fetch('http://localhost:9999/counter') // json-server ./db.json --port 9999
+      .then(response => response.json())
+      .then(result => setCount(result.value));
+  }, []);
 
   return (
     <div style={counterStyle}>
