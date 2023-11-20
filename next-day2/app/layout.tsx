@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -14,22 +15,23 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <h1><a href='/'>Main</a></h1>
+        <h1><Link href='/'>Main</Link></h1>
+        <input type='text' placeholder='search'></input>
         <ul>
           <li>
-            <a href='/read/1'>page1</a>
+            <Link href='/read/1'>page1</Link>
           </li>
           <li>
-            <a href='/read/2'>page2</a>
+            <Link href='/read/2'>page2</Link>
           </li>
         </ul>
         <article>{children}</article>
         <ul>
           <li>
-            <a href='/create'>create</a>
+            <Link href='/create'>create</Link>
           </li>
           <li>
-            <a href='/update/1'>update</a>
+            <Link href='/update/1'>update</Link>
           </li>
           <li>
             <button>delete</button>
