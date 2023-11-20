@@ -5,7 +5,9 @@ type ReadProps = {
 };
 
 export default async function Read({ params: { id } }: ReadProps) {
-    const res = await fetch("http://localhost:9999/posts/" + id);
+    const res = await fetch("http://localhost:9999/posts/" + id, {
+        next: { revalidate: 0 },
+    });
     const post = await res.json();
     return (
         <>
