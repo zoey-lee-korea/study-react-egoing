@@ -1,5 +1,6 @@
 import './globals.css'
 import Link from "next/link";
+import Control from "./Control"
 
 type post = {
   id: string;
@@ -24,7 +25,7 @@ export default async function RootLayout({
     <html lang="en">
       <body>
         <h1><Link href='/'>Main</Link></h1>
-        <input type='text' placeholder='search'></input>
+        {/* <input type='text' placeholder='search'></input> */}
         <ul>
           {posts.map((post) => {
             return (
@@ -35,17 +36,8 @@ export default async function RootLayout({
           })}
         </ul>
         <article>{children}</article>
-        <ul>
-          <li>
-            <Link href='/create'>create</Link>
-          </li>
-          <li>
-            <Link href='/update/1'>update</Link>
-          </li>
-          <li>
-            <button>delete</button>
-          </li>
-        </ul>
+        <Control />
+        {/* 이 부분만 Client Component로 사용하기 위함 */}
       </body>
     </html>
   )
