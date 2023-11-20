@@ -1,7 +1,5 @@
-"use client";
 import './globals.css'
 import Link from "next/link";
-import { useEffect, useState } from 'react';
 
 type post = {
   id: string;
@@ -9,21 +7,15 @@ type post = {
   body: string;
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
 
   //
-  const [posts, setPosts] = useState<post[]>([]);
-  useEffect(() => {
-    fetch("http://localhost:9999/posts")
-      .then((res) => res.json())
-      .then((data) => {
-        setPosts(data);
-      });
-  }, []);
+  const res = await fetch("http://localhost:9999/posts")
+  const posts: post[] = await res.json();
 
   //
   return (
