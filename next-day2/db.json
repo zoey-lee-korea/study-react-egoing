@@ -1,0 +1,24 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "page1",
+      "body": "첫번째 게시물"
+    },
+    {
+      "id": 2,
+      "title": "page2",
+      "body": "두번째 게시물"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
