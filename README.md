@@ -6,13 +6,9 @@
 1. day1 (react) : https://github.com/egoingsb/react-lg-2023-11-13
 2. day2 (next) : https://github.com/egoingsb/next-app-20231120
 
-## 유용한 자료
 
-- Online에서 프로젝트 생성 및 작업 : https://stackblitz.com/
-- ChatGPT & Copilot : 강사님 추천
-- NEXT JS의 App Router 원리 : https://nextjs.org/docs/app/building-your-application/routing
-
-### `배운점 (day 1)`
+## `배운점 (day 1)`
+- 실습 : Counter App 구현
 
 - react : https://react.dev/
 - react initialize : `npx create-react app . && npm run start`
@@ -22,10 +18,32 @@
 - useEffect
 - json-server `npx json-server --port 9999 --watch db.json`
 
-### `yarn test`
+## `배운점 (days2)`
+- 실습 : 게시판 App 구현 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- NextJS : https://nextjs.org/docs
+- Link
+- Typescript
+- Client Component `"use client"`
+- Server Component
+- Caching & Revalidating `{ next: { revalidate: 0 } }`
+- useParams
+- useRouter
+- fetch (GET,POST,PATCH,DELETE)
+
+
+## 유용한 자료
+
+- Online에서 프로젝트 생성 및 작업 : https://stackblitz.com/
+- ChatGPT & Copilot : 강사님 추천
+- Copilot 소스 : https://github.com/features/copilot (한달에 2만원 정도 나오지만 직업 개발자에겐 그만한 가치가 있다) & VSCode에서 관련 Plugin 설치
+
+## 유용한 자료 (Next JS)
+- Next JS의 App Router 원리 : https://nextjs.org/docs/app/building-your-application/routing
+- Next JS의 Link 원리 : https://nextjs.org/docs/app/building-your-application/routing/linking-and-navigating
+- Next JS의 Client Component 설명 : https://nextjs.org/docs/app/building-your-application/rendering/client-components
+- Next JS의 Server Component 설명 : https://nextjs.org/docs/app/building-your-application/rendering/server-components
+- Next JS의 Caching & Revalidating 설명 : https://nextjs.org/docs/app/building-your-application/data-fetching/fetching-caching-and-revalidating
 
 ### `yarn build`
 
