@@ -2,12 +2,14 @@
 
 - 수강일 : 11/13, 11/20
 - 강사님 : Egoing
-- 실습 Github 자료 : https://github.com/egoingsb/react-lg-2023-11-13
+- 실습 Github 자료
+1. day1 (react) : https://github.com/egoingsb/react-lg-2023-11-13
+2. day2 (next) : https://github.com/egoingsb/next-app-20231120
 
 ## 유용한 자료
 
-- Online 프로젝트 : https://stackblitz.com/
-- ChatGPT & Copilot
+- Online에서 프로젝트 생성 및 작업 : https://stackblitz.com/
+- ChatGPT & Copilot : 강사님 추천
 
 ### `배운점 (day 1)`
 
