@@ -1,8 +1,13 @@
 "use client"
+
+import { useRouter } from "next/navigation";
+
 // client component : 사용자가 입력한 정보를 받기 때문
 
 
 export default function Create() {
+    const router = useRouter();
+
     return (
         <>
             <form onSubmit={async (e: any) => {
@@ -18,7 +23,9 @@ export default function Create() {
                     },
                     body: JSON.stringify({ title, body }),
                 })
-                const result = res.json();
+                const result: any = await res.json();
+                router.push("/read/" + result.id);
+                router.refresh();
             }}>
                 <p>
                     <input type="text" name="title" placeholder="제목" />
