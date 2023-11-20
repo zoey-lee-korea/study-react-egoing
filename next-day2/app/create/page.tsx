@@ -10,6 +10,7 @@ export default function Create() {
 
     return (
         <>
+            <h3>게시글 작성</h3>
             <form onSubmit={async (e: any) => {
                 e.preventDefault(); // submit의 default는 화면 전환 -> prevent로 사용하지 않겠다 선언
 
