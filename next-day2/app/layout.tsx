@@ -14,7 +14,9 @@ export default async function RootLayout({
 }) {
 
   //
-  const res = await fetch("http://localhost:9999/posts")
+  const res = await fetch("http://localhost:9999/posts", {
+    next: { revalidate: 0 } // 0초에 1번씩 Revalidating
+  })
   const posts: post[] = await res.json();
 
   //
