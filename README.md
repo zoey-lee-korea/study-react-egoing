@@ -10,6 +10,7 @@
 
 - Online에서 프로젝트 생성 및 작업 : https://stackblitz.com/
 - ChatGPT & Copilot : 강사님 추천
+- NEXT JS의 App Router 원리 : https://nextjs.org/docs/app/building-your-application/routing
 
 ### `배운점 (day 1)`
 
