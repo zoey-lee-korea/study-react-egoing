@@ -7,7 +7,7 @@
 2. day2 (next) : https://github.com/egoingsb/next-app-20231120
 
 
-## `배운점 (day 1)`
+## 배운점 (day 1)
 - 실습 : Counter App 구현
 
 - react : https://react.dev/
@@ -18,7 +18,7 @@
 - useEffect
 - json-server `npx json-server --port 9999 --watch db.json`
 
-## `배운점 (days2)`
+## 배운점 (days2)
 - 실습 : 게시판 App 구현 
 
 - NextJS : https://nextjs.org/docs
